@@ -26,8 +26,8 @@ jobs:
           toolchain: stable
           override: true
 
-      - name: Install cobalt
-        run: cargo install --locked cobalt
+      - name: Install cobalt (from GitHub source)
+        run: cargo install --git https://github.com/cobalt-org/cobalt.rs cobalt
 
       - name: Build site
         run: cobalt build
